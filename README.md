@@ -4,6 +4,13 @@ A Streamlit-powered dashboard for exploring heart-failure clinical records and d
 
 ---
 
+🔗 Deployed Application
+
+   Access the live dashboard here:
+      🎯 [ Live Demo on Streamlit Cloud](https://summer-internship.streamlit.app/)
+
+---
+
 ## 🔍 Overview
 
 This repository hosts a two-mode Streamlit app:
@@ -15,7 +22,7 @@ This repository hosts a two-mode Streamlit app:
    - On-the-fly risk prediction using an MLflow-logged `pyfunc` model, with a dynamic signature lookup to enforce correct feature ordering.
 
 Under the hood:  
-- **Streamlit** for UI & caching (`@st.cache_data`, `@st.cache_resource`) to avoid redundant I/O and model reloads :contentReference[oaicite:0]{index=0}.  
+- **Streamlit** for UI & caching (`@st.cache_data`, `@st.cache_resource`) to avoid redundant I/O and model reloads.  
 - **Pandas/NumPy** for data wrangling.  
 - **Seaborn/Matplotlib** for plotting.  
 - **MLflow** for model versioning, packaging, and loading :contentReference[oaicite:1]{index=1}.
