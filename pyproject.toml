@@ -1,0 +1,25 @@
+[project]
+name = "heart-failure-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "imblearn>=0.0",
+    "joblib>=1.5.1",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.3",
+    "mlflow>=3.1.4",
+    "numba>=0.58",
+    "numpy>=2.2.6",
+    "pandas>=2.3.1",
+    "python-dotenv>=1.1.1",
+    "pytorch-tabnet>=4.1.0",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "shap>=0.48.0",
+    "streamlit>=1.47.1",
+    "torch>=2.7.1",
+    "xgboost>=3.0.3",
+]
+
