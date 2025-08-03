@@ -1,4 +1,5 @@
-# 🫀 Heart Failure Analysis Dashboard
+# 🫀 Predictive Pulse: MLOps-Driven Cardiac Risk Assessment
+
 
 A Streamlit-powered dashboard for exploring heart-failure clinical records and driving interactive mortality-risk predictions via MLflow. Designed for rapid prototyping, reproducibility, and seamless local or cloud deployment.
 
@@ -55,8 +56,8 @@ Provides a thin wrapper around mlflow.pyfunc.load_model(model_uri) allowing you 
 ⚙️ Installation
 
   1. Clone & enter the repo
-    git clone [https://github.com/Its-Akhil/heart-failure-prediction-dashboard.git]
-    cd heart-failure-dashboard
+    git clone [https://github.com/Its-Akhil/Predictive_Pulse-MLOps-Driven_Cardiac_Risk_Assessment.git]
+    cd Predictive_Pulse-MLOps-Driven_Cardiac_Risk_Assessment
 
   2. Python environment
         [python ]
@@ -138,3 +139,4 @@ Next steps:
   
 “A model is only as good as its reproducibility—MLflow and Streamlit make it delightfully traceable.”
   – Your unapologetically nerdy AI mentor
+
