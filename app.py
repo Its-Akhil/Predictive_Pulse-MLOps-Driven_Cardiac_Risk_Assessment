@@ -116,7 +116,11 @@ st.markdown("""
         gap: 0.25rem;
     }
     
-    .stRadio label {
+    .stRadio > label {
+        display: none !important;
+    }
+    
+    .stRadio div[role="radiogroup"] label {
         padding: 0.5rem 0.75rem !important;
         border-radius: 6px !important;
         cursor: pointer !important;
@@ -130,39 +134,39 @@ st.markdown("""
         box-sizing: border-box !important;
     }
     
-    .stRadio label[data-checked="true"],
-    .stRadio label:has(input:checked),
-    .stRadio label:has([aria-checked="true"]),
-    .stRadio label:has([data-checked="true"]) {
+    .stRadio div[role="radiogroup"] label[data-checked="true"],
+    .stRadio div[role="radiogroup"] label:has(input:checked),
+    .stRadio div[role="radiogroup"] label:has([aria-checked="true"]),
+    .stRadio div[role="radiogroup"] label:has([data-checked="true"]) {
         background-color: #FFF7ED !important;
     }
     
-    .stRadio label[data-checked="true"] p,
-    .stRadio label:has(input:checked) p,
-    .stRadio label:has([aria-checked="true"]) p,
-    .stRadio label:has([data-checked="true"]) p,
-    .stRadio label[data-checked="true"] span,
-    .stRadio label:has(input:checked) span,
-    .stRadio label:has([aria-checked="true"]) span,
-    .stRadio label:has([data-checked="true"]) span {
+    .stRadio div[role="radiogroup"] label[data-checked="true"] p,
+    .stRadio div[role="radiogroup"] label:has(input:checked) p,
+    .stRadio div[role="radiogroup"] label:has([aria-checked="true"]) p,
+    .stRadio div[role="radiogroup"] label:has([data-checked="true"]) p,
+    .stRadio div[role="radiogroup"] label[data-checked="true"] span,
+    .stRadio div[role="radiogroup"] label:has(input:checked) span,
+    .stRadio div[role="radiogroup"] label:has([aria-checked="true"]) span,
+    .stRadio div[role="radiogroup"] label:has([data-checked="true"]) span {
         color: #FF5A1F !important;
         font-weight: 600 !important;
     }
     
-    .stRadio label:hover {
+    .stRadio div[role="radiogroup"] label:hover {
         background-color: #FFF7ED !important;
     }
     
     /* Hide the radio circle safely */
-    .stRadio label [data-baseweb="radio"] {
+    .stRadio div[role="radiogroup"] label [data-baseweb="radio"] {
         display: none !important;
     }
     
-    .stRadio label > div:first-child:not(:has(p)):not(:has(span)) {
+    .stRadio div[role="radiogroup"] label > div:first-child:not(:has(p)):not(:has(span)) {
         display: none !important;
     }
 
-    .stRadio label p, .stRadio label span {
+    .stRadio div[role="radiogroup"] label p, .stRadio div[role="radiogroup"] label span {
         font-size: 0.85rem !important;
         font-weight: 500 !important;
         color: #4B5563 !important;
@@ -389,7 +393,6 @@ with st.sidebar:
             <div class="sidebar-icon">∿</div>
             <span style="color: #111827; visibility: visible;">Heart Failure Analysis</span>
         </div>
-        <div class="nav-header">NAVIGATION</div>
     """, unsafe_allow_html=True)
     
     app_mode = st.radio(
@@ -520,7 +523,7 @@ if "Exploratory" in app_mode:
             """
             
         st.markdown(html_corrs, unsafe_allow_html=True)
-        st.markdown("<div class='corr-footer'>'time', 'serum_creatinine', and 'ejection_fraction' have the strongest correlation with the 'DEATH_EVENT'.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='corr-footer' style='float:right;'>'time', 'serum_creatinine', and 'ejection_fraction' have the strongest correlation with the 'DEATH_EVENT'.</div>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
 # ==========================================
